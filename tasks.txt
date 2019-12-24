@@ -1,1 +1,3 @@
 sass homeStyleSrc.scss homeStyle.css --style compressed
+
+# 'alt' attribute if added must follow the 'src' attribute.

@@ -7,35 +7,88 @@ const filePath = path.join(__dirname, 'src/index.html');
 // SRC ATTRIBUTES CONTENT TO REPLACE:
 const replacers = {
   // BANNER
-  bannerOne: 'https://stg.lands-design.com/wp-content/uploads/2019/10/15580157028_7a02d3853f_o-1.jpg',
-  bannerTwo: 'https://stg.lands-design.com/wp-content/uploads/2019/10/15765573295_a32a330218_o.jpg',
-  bannerThree: 'https://stg.lands-design.com/wp-content/uploads/2019/12/shrubs-mejor.jpg',
+  bannerOne: {
+    url: 'https://stg.lands-design.com/wp-content/uploads/2019/10/15580157028_7a02d3853f_o-1.jpg',
+    alt: 'Lands Design project of a pond surrounded by a park with a pathway in front of the water.'
+  },
+  bannerTwo: {
+    url: 'https://stg.lands-design.com/wp-content/uploads/2019/10/15765573295_a32a330218_o.jpg',
+    alt: 'Lands Design project of a park with pathways, green areas and a big blue art structure.'
+  },
+  bannerThree: {
+    url: 'https://stg.lands-design.com/wp-content/uploads/2019/12/shrubs-mejor.jpg',
+    alt: 'Lands Design project of a garden with small organized plants and trees.'
+  },
   // MAIN VIDEO
-  mainVideo: 'https://stg.lands-design.com/wp-content/uploads/2019/12/LandsPromo-Q35-M.mp4',
+  mainVideo: {
+    url: 'https://stg.lands-design.com/wp-content/uploads/2019/12/LandsPromo-Q35-M.mp4'
+  },
   // HOW IS LANDS USED
-  landscapeArch: 'https://stg.lands-design.com/wp-content/uploads/2019/12/big-park.jpg',
-  greenInfrastructure: 'https://stg.lands-design.com/wp-content/uploads/2019/12/green-infrastructure.jpeg',
-  forestry: 'https://stg.lands-design.com/wp-content/uploads/2019/12/forestry-enscape.jpg',
-  urbanPlanning: 'https://stg.lands-design.com/wp-content/uploads/2019/12/urban-planning.jpg',
-  cgArtists: 'https://stg.lands-design.com/wp-content/uploads/2019/12/cg-artists.jpg',
+  landscapeArch: {
+    url: 'https://stg.lands-design.com/wp-content/uploads/2019/12/big-park.jpg',
+    alt: 'Bird\'s eye view of the Canal Park project created with Lands Design. Big green areas mixed with water areas.'
+  },
+  greenInfrastructure: {
+    url: 'https://stg.lands-design.com/wp-content/uploads/2019/12/green-infrastructure.jpeg',
+    alt: 'View of a viaduct covered with vertical gardens created with Lands Design.'
+  },
+  forestry: {
+    url: 'https://stg.lands-design.com/wp-content/uploads/2019/12/forestry-enscape.jpg',
+    alt: 'A model of low hills populated with a forest in front of the sea created with Lands Design.'
+  },
+  urbanPlanning: {
+    url: 'https://stg.lands-design.com/wp-content/uploads/2019/12/urban-planning.jpg',
+    alt: 'Public space project created with Lands Design for a public space with play area, benches and trees.'
+  },
+  cgArtists: {
+    url: 'https://stg.lands-design.com/wp-content/uploads/2019/12/cg-artists.jpg',
+    alt: 'View of the Villa Savoye project with its green area around created with Lands Design.'
+  },
   // WHY LANDS (gifs)
-  lim: 'https://stg.lands-design.com/wp-content/uploads/2019/12/LandsBIM.gif',
-  terrains: 'https://stg.lands-design.com/wp-content/uploads/2019/12/TerrainOperations.gif',
-  collaboration: 'https://stg.lands-design.com/wp-content/uploads/2019/12/placeholder-img.jpg',
-  plantDatabase: 'https://stg.lands-design.com/wp-content/uploads/2019/12/LandsPlantsDatabase.gif',
-  dynamicDoc: 'https://stg.lands-design.com/wp-content/uploads/2019/12/placeholder-img.jpg',
-  parametricDesign: 'https://stg.lands-design.com/wp-content/uploads/2019/12/LandsParametricDesign.gif',
-  liveTheProject: 'https://stg.lands-design.com/wp-content/uploads/2019/12/placeholder-img.jpg',
+  lim: {
+    url: 'https://stg.lands-design.com/wp-content/uploads/2019/12/LandsBIM.gif',
+    alt: 'One of the main Lands Design features is the possibility to model with smart objects that have 3D and 2D representation and embedded information.'
+  },
+  terrains: {
+    url: 'https://stg.lands-design.com/wp-content/uploads/2019/12/TerrainOperations.gif',
+    alt: 'Lands Design terrains can be imported or created from points or curves. Also they can be reshaped based on cut and fills, paths and divisions.'
+  },
+  collaboration: {
+    url: 'https://stg.lands-design.com/wp-content/uploads/2019/12/placeholder-img.jpg',
+    alt: 'Test alt 11'
+  },
+  plantDatabase: {
+    url: 'https://stg.lands-design.com/wp-content/uploads/2019/12/LandsPlantsDatabase.gif',
+    alt: 'Examples of the species in the Lands Design huge plant database which include 3D and 2D representations and change of season.'
+  },
+  dynamicDoc: {
+    url: 'https://stg.lands-design.com/wp-content/uploads/2019/12/placeholder-img.jpg',
+    alt: 'Test alt 13'
+  },
+  parametricDesign: {
+    url: 'https://stg.lands-design.com/wp-content/uploads/2019/12/LandsParametricDesign.gif',
+    alt: 'Examples of custom landscape parametric design workflows with Grasshopper and Lands Design.'
+  },
+  liveTheProject: {
+    url: 'https://stg.lands-design.com/wp-content/uploads/2019/12/placeholder-img.jpg',
+    alt: 'Test alt 15'
+  },
   // PLATFORMS
-  logoRhino: 'https://stg.lands-design.com/wp-content/uploads/2019/12/RhinoHead.png',
-  logoAutocad: 'https://stg.lands-design.com/wp-content/uploads/2019/11/autocad-logo.png'
+  logoRhino: {
+    url: 'https://stg.lands-design.com/wp-content/uploads/2019/12/RhinoHead.png',
+    alt: 'A 3D model of a rhino head representing the Rhinoceros3D logo.'
+  },
+  logoAutocad: {
+    url: 'https://stg.lands-design.com/wp-content/uploads/2019/11/autocad-logo.png',
+    alt: 'A red capital letter A representing the AutoCAD logo.'
+  }
 }
 
 // REGEXP REPLACEMENT LOGIC:
-const regexp = /replaceSrc="([a-zA-Z]+)".+?(src="[^"]+")/g;
+const regexp = /replaceSrc="([a-zA-Z]+)".+?(src="[^"]+")(?:\s+?(alt="[^"]*"))?/g;
 
-function replacer(match, p1, p2) {
-  return p2.replace(/src="[^"]+"/, 'src="' + replacers[p1] + '"');
+function replacer(match, p1, p2, p3) {
+  return p2.replace(/src="[^"]+"/, 'src="' + replacers[p1].url + '"') + (p3 ? ' alt="' + replacers[p1].alt + '"' : '');
 }
 
 // READ, REPLACE AND WRITE THE FILE:
