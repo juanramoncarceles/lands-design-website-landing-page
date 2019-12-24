@@ -1,0 +1,1 @@
+sass homeStyleSrc.scss homeStyle.css --style compressed

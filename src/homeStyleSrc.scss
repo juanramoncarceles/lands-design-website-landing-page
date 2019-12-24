@@ -1,0 +1,699 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,500&display=swap');
+
+body.home {
+
+  /*********************************************************/
+  /************************ GENERICS ***********************/
+  /*********************************************************/
+  
+  --header-height: 80px;
+  --questions-height: 280px;
+  --decoration-size: 500px;
+
+  a.official-btn {
+    padding: 0.3em 1em;
+    border: 2px solid;
+    font-size: 20px;
+    border-radius: 3px;
+    transition: all .2s;
+  }
+
+  a.official-btn:hover {
+    padding: .3em 2em .3em .7em;
+    background-color: rgba(0,0,0,.05);
+    border: 2px solid transparent;
+    border-radius: 0px;
+  }
+
+  a.official-btn::after {
+    content: "\35";
+    font-family: 'ETmodules';
+    transition: all 300ms ease 0ms;
+    opacity: 0;
+    position: absolute;
+    margin-left: -1em;
+    font-size: 32px;
+  }
+  
+  a.official-btn:hover::after {
+    margin-left: 0;
+    opacity: 1;
+  }
+  
+  .content-width {
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  @media (max-width: 950px) {
+    .content-width {
+      width: 95%;
+    }
+  }
+
+  /*********************************************************/
+  /********************** TOP BANNER ***********************/
+  /*********************************************************/
+  
+  section.banner {
+    position: relative;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-color: rgba(135, 135, 135, 0.55);
+    }
+  
+    & > .content-width {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      position: relative;
+      z-index: 2;
+    }
+  
+    .text-content {
+      text-align: center;
+      text-shadow: 1px 2px 5px #222;
+      --banner-text-color: #ebebeb; // Here to be applied to each text element to make sure it overrides.
+  
+      & > h1 {
+        padding-top: 3rem; // To make sure the title is not covered by the default wp navbar.
+        color: var(--banner-text-color);
+        font-size: 4rem;
+        font-weight: 200;
+        font-family: 'Oswald', sans-serif;
+      }
+  
+      & > h2 {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        line-height: 3rem;
+        color: var(--banner-text-color);
+        font-size: 3rem;
+        font-weight: 500;
+        font-family: 'Oswald', sans-serif;
+      }
+
+      & > h3 {
+        color: var(--banner-text-color);
+      }
+    }
+    
+    #landsHomeSlideshow {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    
+    #landsHomeSlideshow > img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.5s ease 0s;
+    }
+  
+    a#tryLandsHomeBtn {
+      align-self: center;
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+      padding: 0.6rem;
+      border: 1px solid;
+      font-family: 'Open sans', sans-serif;
+      font-weight: bold;
+      font-size: 1rem;
+      box-shadow: 1px 1px 10px #292929;
+      color: #232323;
+      background-image: linear-gradient(90deg, #f0dba3, #c4eda8, #78e3ca);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+    }  
+  }
+  
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  @media (min-width: 600px) {
+    section.banner {
+      height: calc(100vh - (var(--header-height) + var(--questions-height)));
+  
+      &::before {
+        background-color: unset;
+        background-image: linear-gradient(0.4turn, rgba(0, 0, 0, 0), rgba(80, 80, 80, 0.9));
+      }
+    
+      & > .content-width {
+        align-items: flex-end;
+        justify-content: center;
+      }
+    
+      .text-content {
+        text-align: right;
+      }
+    
+      .text-content > h1 {
+        font-size: 5rem;
+      }
+    
+      .text-content > h2 {
+        line-height: 4rem;
+        font-size: 3.5rem;
+      }
+    
+      a#tryLandsHomeBtn {
+        position: fixed;
+        left: 0;
+        top: 9rem;
+        border-left: none;
+        transform-origin: center left;
+        transition: transform 0.3s;
+      }
+      
+      a#tryLandsHomeBtn:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+  
+  /*********************************************************/
+  /********************** QUESTIONS ************************/
+  /*********************************************************/
+  
+  section.questions.content-width {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  
+    & > a {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      margin-right: 1rem;
+      margin-left: 1rem;
+      text-align: center;
+    }
+  
+    svg {
+      width: 70px;
+      height: 85px;
+    }
+  
+    h4 {
+      margin-top: 0.5rem;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.5rem;
+      font-weight: normal;
+    }
+  }
+  
+  @media (min-width: 600px) {
+    section.questions.content-width {
+      height: var(--questions-height);
+      margin-top: 0;
+      margin-bottom: 0;
+  
+      & > a {
+        justify-content: center;
+      }
+  
+      svg {
+        width: 90px;
+        height: 105px;
+        opacity: 0.3;
+        transition: all 0.4s;
+      }
+  
+      & > a:hover svg {
+        opacity: 1;
+        transform: translateY(-20px);
+      }
+  
+      & > a::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 0%;
+        transition: width 0.4s;
+      }
+  
+      & > a.why-use-lands::after {
+        background-color: rgb(166, 217, 132);
+      }
+      
+      & > a.how-is-lands-used::after {
+        background-color: rgb(219, 196, 132);
+      }
+      
+      & > a:hover::after {
+        width: 100%;
+      }
+  
+      h4 {
+        font-size: 2rem;
+      }
+    }  
+  }
+  
+  /*********************************************************/
+  /******************** MAIN VIDEO *************************/
+  /*********************************************************/
+  
+  section.video {
+    position: relative;
+    margin-top: 7rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: #f5f5f5;
+  
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: var(--decoration-size);
+      top: calc(var(--decoration-size) * -1);
+      z-index: -1;
+      // background-image: url(imgs/landsBgRoundTop.svg); /* local */
+      background-image: url(https://stg.lands-design.com/wp-content/uploads/2019/12/landsBgRoundTop.svg); /* wordpress */
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: bottom;
+    }
+    
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: var(--decoration-size);
+      bottom: calc(var(--decoration-size) * -1);
+      z-index: -1;
+      // background-image: url(imgs/landsBgRoundBot.svg); /* local */
+      background-image: url(https://stg.lands-design.com/wp-content/uploads/2019/12/landsBgRoundBot.svg); /* wordpress */
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: top;
+    }
+  
+    .section-title {
+      margin-bottom: 2rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 500;
+    }
+  
+    & > div > video {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  /*********************************************************/
+  /************** SECTION: HOW IS LANDS USED ***************/
+  /*********************************************************/
+  
+  section.how-is-lands-used {
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+  
+    img {
+      display: block;
+      width: 100%;
+    }
+  
+    .section-title > h3 {
+      margin-bottom: 3rem;
+      text-align: center;
+      line-height: 4rem;
+    }
+  
+    .section-title > h3 > span:first-child,
+    .section-title > h3 > span:nth-child(3) {
+      font-family: 'Open sans', sans-serif;
+      font-weight: bold;
+    }
+  
+    .section-title > h3 > span:first-child {
+      display: block;
+      font-size: 4rem;
+    }
+  
+    .section-title > h3 > span:nth-child(2) {
+      display: block;
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      font-weight: 300;
+    }
+  
+    .section-title > h3 > span:nth-child(3) {
+      font-size: 4rem;
+    }
+  
+    .item {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+  
+    .item > div {
+      width: 100%;
+    }
+  
+    .text-container {
+      padding: 1rem;
+      background-color: #f5f5f5;
+    }
+    
+    .text-container > h5 {
+      margin-bottom: 0.5rem;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    .text-container > p {
+      text-align: justify;
+    }
+  }
+  
+  @media (min-width: 600px) {
+    section.how-is-lands-used {
+      padding-bottom: 14rem;
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+  
+      .section-title > h3 {
+        line-height: 5rem;
+      }
+  
+      .section-title > h3 > span:first-child {
+        padding-right: 18rem;
+        font-size: 6rem;
+      }
+    
+      .section-title > h3 > span:nth-child(2) {
+        display: inline;
+        padding-left: 4rem;
+        padding-right: 1rem;
+        font-size: 4rem;
+      }
+  
+      .item {
+        flex-direction: row;
+      }
+    
+      .item > div {
+        width: 50%;
+      }
+    
+      .text-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        text-align: left;
+      }
+    }
+  }
+  
+  /*********************************************************/
+  /**************** SECTION: WHY USE LANDS *****************/
+  /*********************************************************/
+  
+  section.why-use-lands {
+    position: relative;
+    padding-top: 5rem;
+    background-color: #f5f5f5; /* Should match with the svg placed before & after */
+  
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: var(--decoration-size);
+      top: calc(var(--decoration-size) * -1);
+      z-index: -1;
+      // background-image: url(imgs/landsBgIrregTop.svg); /* local */
+      background-image: url(https://stg.lands-design.com/wp-content/uploads/2019/12/landsBgIrregTop.svg); /* wordpress */
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: bottom;
+    }
+    
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: var(--decoration-size);
+      bottom: calc(var(--decoration-size) * -1);
+      z-index: -1;
+      // background-image: url(imgs/landsBgIrregBot.svg); /* local */
+      background-image: url(https://stg.lands-design.com/wp-content/uploads/2019/12/landsBgIrregBot.svg); /* wordpress */
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: top;
+    }
+  
+    video,
+    img {
+      width: 100%;
+    }
+    
+    .grid > .item {
+      margin-bottom: 5rem;
+    }
+    
+    .btn-container {
+      text-align: center;
+      padding-bottom: 5rem;
+    }
+    
+    .section-title > h3 {
+      text-align: center;
+      line-height: 4rem;
+    }
+    
+    .section-title > h3 > span:first-child {
+      display: block;
+      font-family: 'Open sans', sans-serif;
+      font-size: 4rem;
+      font-weight: bold;
+    }
+    
+    .section-title > h3 > span:nth-child(2) {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      font-weight: 300;
+    }
+    
+    .text-container {
+      padding: 0.5rem;
+    }
+    
+    .text-container > h5 {
+      margin-bottom: 0.5rem;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .text-container > p {
+      text-align: justify;
+    }
+  }
+  
+  @media (min-width: 600px) {
+    section.why-use-lands {
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 60px;
+      }
+    
+      .grid > .right {
+        grid-column: 2;
+      }
+      
+      .grid > .item1 {
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+      
+      .grid > .item2 {
+        grid-row-start: 2;
+        grid-row-end: 4;
+      }
+      
+      .grid > .item3 {
+        grid-row-start: 3;
+        grid-row-end: 5;
+      }
+      
+      .grid > .item4 {
+        grid-row-start: 4;
+        grid-row-end: 6;
+      }
+      
+      .grid > .item5 {
+        grid-row-start: 5;
+        grid-row-end: 7;
+      }
+      
+      .grid > .item6 {
+        grid-row-start: 6;
+        grid-row-end: 8;
+      }
+      
+      .grid > .item7 {
+        grid-row-start: 7;
+        grid-row-end: 9;
+      }
+      
+      .grid > .item8 {
+        grid-row-start: 8;
+        grid-row-end: 10;
+      }
+    
+      .btn-container {
+        padding-bottom: 0;
+      }
+    
+      .section-title > h3 {
+        text-align: right;
+        line-height: 6rem;
+      }
+    
+      .section-title > h3 > span:first-child {
+        font-size: 6rem;
+      }
+    
+      .section-title > h3 > span:nth-child(2) {
+        font-size: 4rem;
+      }
+    }
+  }
+  
+  /*********************************************************/
+  /****************** SECTION: PLATFORMS *******************/
+  /*********************************************************/
+  
+  section.platforms {
+    padding-top: 10rem;
+    padding-bottom: 1rem;
+  
+    .section-title {
+      text-align: center;
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.5rem;
+      font-weight: normal;
+    }
+  
+    & > div > p {
+      margin: 1rem auto 3rem;
+      text-align: center;
+    }
+  
+    div.platforms-columns {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    div.platforms-columns > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    div.platforms-columns > .right-col {
+      margin-top: 2rem;
+    }
+    
+    div.platforms-columns h5 {
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+    
+    div.platforms-columns img {
+      display: block;
+      height: 100px;
+      margin: 0 auto 0.5rem;
+    }
+    
+    div.platforms-columns ul {
+      padding-left: 0;
+    }
+    
+    div.platforms-columns li {
+      display: flex;
+      align-items: center;
+      margin-left: 0;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+    
+    div.platforms-columns li > svg {
+      width: 40px;
+      height: 40px;
+    }
+    
+    div.platforms-columns li > span {
+      padding-left: 1rem;
+    }
+    
+    .btn-container {
+      margin-top: 4rem;
+      text-align: center;
+    }
+  }
+  
+  @media (min-width: 600px) {
+    section.platforms {
+      padding-top: 16rem;
+  
+      div.platforms-columns {
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+    
+      div.platforms-columns > .left-col {
+        align-items: flex-start;
+      }
+    
+      div.platforms-columns > .right-col {
+        align-items: flex-end;
+        margin-top: 0;
+      }
+      
+      div.platforms-columns > .left-col li {
+        justify-content: flex-start;
+      }
+    
+      div.platforms-columns > .right-col li {
+        justify-content: flex-end;
+      }
+    
+      div.platforms-columns > .right-col li > svg {
+        order: 1;
+      }
+    
+      div.platforms-columns > .right-col li > span {
+        padding-left: 0;
+        padding-right: 1rem;
+      }
+    }
+  }
+}
