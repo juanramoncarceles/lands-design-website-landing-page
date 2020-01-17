@@ -33,7 +33,7 @@ const replacers = {
     alt: 'View of a viaduct covered with vertical gardens created with Lands Design.'
   },
   forestry: {
-    url: 'https://stg.lands-design.com/wp-content/uploads/2019/12/forestry-enscape.jpg',
+    url: 'https://stg.lands-design.com/wp-content/uploads/2020/01/forestry-enscape.png',
     alt: 'A model of low hills populated with a forest in front of the sea created with Lands Design.'
   },
   urbanPlanning: {
@@ -46,32 +46,32 @@ const replacers = {
   },
   // WHY LANDS (gifs)
   lim: {
-    url: 'https://stg.lands-design.com/wp-content/uploads/2019/12/LandsBIM.gif',
+    url: 'https://stg.lands-design.com/wp-content/uploads/2020/01/limPoster.png',
     alt: 'One of the main Lands Design features is the possibility to model with smart objects that have 3D and 2D representation and embedded information.'
   },
   terrains: {
-    url: 'https://stg.lands-design.com/wp-content/uploads/2019/12/TerrainOperations.gif',
+    url: 'https://stg.lands-design.com/wp-content/uploads/2020/01/terrainsPoster.png',
     alt: 'Lands Design terrains can be imported or created from points or curves. Also they can be reshaped based on cut and fills, paths and divisions.'
   },
   collaboration: {
-    url: 'https://stg.lands-design.com/wp-content/uploads/2019/12/placeholder-img.jpg',
-    alt: 'Test alt 11'
+    url: 'https://stg.lands-design.com/wp-content/uploads/2020/01/interoperability.png',
+    alt: 'Diagram indicating the most important file formats with which Lands Design can communicate.'
   },
-  plantDatabase: {
-    url: 'https://stg.lands-design.com/wp-content/uploads/2019/12/LandsPlantsDatabase.gif',
+  plants: {
+    url: 'https://stg.lands-design.com/wp-content/uploads/2020/01/plants.jpg',
     alt: 'Examples of the species in the Lands Design huge plant database which include 3D and 2D representations and change of season.'
   },
-  dynamicDoc: {
-    url: 'https://stg.lands-design.com/wp-content/uploads/2019/12/placeholder-img.jpg',
-    alt: 'Test alt 13'
+  documentation: {
+    url: 'https://stg.lands-design.com/wp-content/uploads/2020/01/documentation.png',
+    alt: 'Example of a landscape project layout created with Lands Design.'
   },
-  parametricDesign: {
-    url: 'https://stg.lands-design.com/wp-content/uploads/2019/12/LandsParametricDesign.gif',
+  parametric: {
+    url: 'https://stg.lands-design.com/wp-content/uploads/2020/01/parametric.png',
     alt: 'Examples of custom landscape parametric design workflows with Grasshopper and Lands Design.'
   },
-  liveTheProject: {
-    url: 'https://stg.lands-design.com/wp-content/uploads/2019/12/placeholder-img.jpg',
-    alt: 'Test alt 15'
+  presentation: {
+    url: 'https://stg.lands-design.com/wp-content/uploads/2020/01/presentation.jpg',
+    alt: 'Render of the Villa Arcipelago by Gianni Botsford with the plants created with Lands Design'
   },
   // PLATFORMS
   logoRhino: {

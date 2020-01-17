@@ -124,7 +124,8 @@ body.home {
       font-size: 1rem;
       box-shadow: 1px 1px 10px #292929;
       color: #232323;
-      background-image: linear-gradient(90deg, #f0dba3, #c4eda8, #78e3ca);
+      background-image: linear-gradient(90deg, #f3e1b1, #d7f5c3, #adecec);
+      // background-image: linear-gradient(90deg, #f0dba3, #c4eda8, #78e3ca);
       background-size: 400% 400%;
       animation: gradientBG 10s ease infinite;
     }  
@@ -282,7 +283,7 @@ body.home {
       top: calc(var(--decoration-size) * -1);
       z-index: -1;
       // background-image: url(imgs/landsBgRoundTop.svg); /* local */
-      background-image: url(https://stg.lands-design.com/wp-content/uploads/2019/12/landsBgRoundTop.svg); /* wordpress */
+      background-image: url(/wp-content/uploads/2020/01/landsBgRoundTop.svg); /* wordpress */
       background-repeat: no-repeat;
       background-size: contain;
       background-position: bottom;
@@ -297,7 +298,7 @@ body.home {
       bottom: calc(var(--decoration-size) * -1);
       z-index: -1;
       // background-image: url(imgs/landsBgRoundBot.svg); /* local */
-      background-image: url(https://stg.lands-design.com/wp-content/uploads/2019/12/landsBgRoundBot.svg); /* wordpress */
+      background-image: url(/wp-content/uploads/2020/01/landsBgRoundBot.svg); /* wordpress */
       background-repeat: no-repeat;
       background-size: contain;
       background-position: top;
@@ -322,7 +323,7 @@ body.home {
   
   section.how-is-lands-used {
     padding-top: 8rem;
-    padding-bottom: 6rem;
+    padding-bottom: 8rem;
   
     img {
       display: block;
@@ -374,9 +375,10 @@ body.home {
     }
     
     .text-container > h5 {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.8rem;
       text-align: center;
-      font-size: 1.5rem;
+      font-size: 2rem;
+      font-weight: normal;
     }
 
     .text-container > p {
@@ -386,7 +388,7 @@ body.home {
   
   @media (min-width: 600px) {
     section.how-is-lands-used {
-      padding-bottom: 14rem;
+      padding-bottom: 12rem;
 
       img {
         height: 100%;
@@ -418,10 +420,22 @@ body.home {
       }
     
       .text-container {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
         text-align: left;
       }
+
+      .text-container > h5 {
+        flex-grow: 1;
+        text-align: left;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    section.how-is-lands-used {
+      padding-bottom: 18rem;
     }
   }
   
@@ -443,7 +457,7 @@ body.home {
       top: calc(var(--decoration-size) * -1);
       z-index: -1;
       // background-image: url(imgs/landsBgIrregTop.svg); /* local */
-      background-image: url(https://stg.lands-design.com/wp-content/uploads/2019/12/landsBgIrregTop.svg); /* wordpress */
+      background-image: url(/wp-content/uploads/2020/01/landsBgIrregTop.svg); /* wordpress */
       background-repeat: no-repeat;
       background-size: contain;
       background-position: bottom;
@@ -458,7 +472,7 @@ body.home {
       bottom: calc(var(--decoration-size) * -1);
       z-index: -1;
       // background-image: url(imgs/landsBgIrregBot.svg); /* local */
-      background-image: url(https://stg.lands-design.com/wp-content/uploads/2019/12/landsBgIrregBot.svg); /* wordpress */
+      background-image: url(/wp-content/uploads/2020/01/landsBgIrregBot.svg); /* wordpress */
       background-repeat: no-repeat;
       background-size: contain;
       background-position: top;
@@ -514,6 +528,23 @@ body.home {
   
   @media (min-width: 600px) {
     section.why-use-lands {
+      .section-title {
+        margin-bottom: 10rem;
+      }
+
+      .section-title > h3 {
+        text-align: right;
+        line-height: 6rem;
+      }
+    
+      .section-title > h3 > span:first-child {
+        font-size: 6rem;
+      }
+    
+      .section-title > h3 > span:nth-child(2) {
+        font-size: 4rem;
+      }
+
       .grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -572,17 +603,24 @@ body.home {
         padding-bottom: 0;
       }
     
-      .section-title > h3 {
-        text-align: right;
-        line-height: 6rem;
+      .grid > .item > .media-container {
+        position: relative;
       }
-    
-      .section-title > h3 > span:first-child {
-        font-size: 6rem;
+  
+      .grid > .item > .media-container::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-50 -50 200 200'><defs><radialGradient id='playGrad' cx='50%' cy='50%' r='50%' fx='50%' fy='50%'><stop offset='0%' style='stop-color:rgb(255,255,255);stop-opacity:0.8'/><stop offset='100%' style='stop-color:rgb(255,255,255);stop-opacity:0'/></radialGradient></defs><circle fill='url(%23playGrad)' cx='50' cy='50' r='100'/><path fill='%233d3d3d' fill-rule='evenodd' stroke='%23fff' d='M38.5833,27.0086L 38.5833,72.4596L 69.25,49.7917L 38.5833,27.0086Z M50,1C 77.0619,1 99,22.938 99,50C 99,77.062 77.0623,99 50.0003,99C 22.9384,99 1,77.062 1,50C 1,22.9381 22.938,1 50,1 Z M 50,8C 73.1959,8 92,26.8041 92,50C 92,73.196 73.1959,92 50,92C 26.804,92 8,73.196 8,50C 8,26.8041 26.804,8 50,8 Z'/></svg>");
+        background-size: 125px;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: opacity 0.5s;
       }
-    
-      .section-title > h3 > span:nth-child(2) {
-        font-size: 4rem;
+
+      .grid > .item.play > .media-container::before {
+        opacity: 0;
       }
     }
   }
@@ -667,7 +705,7 @@ body.home {
   
       div.platforms-columns {
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-around; /* space-evenly would be better but is not supported in Edge */
       }
     
       div.platforms-columns > .left-col {
