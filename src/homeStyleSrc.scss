@@ -7,7 +7,7 @@ body.home {
   /*********************************************************/
   
   --header-height: 80px;
-  --questions-height: 280px;
+  --questions-height: 30vh; // 280px
   --decoration-size: 500px;
 
   a.official-btn {
@@ -155,16 +155,17 @@ body.home {
         margin-right: 2rem;
         margin-left: 2rem;
         text-align: right;
+        font-size: 2vh;
       }
     
       .text-content > h1 {
         padding-top: 0;
-        font-size: 5rem;
+        font-size: 5em;
       }
     
       .text-content > h2 {
-        line-height: 4rem;
-        font-size: 3.5rem;
+        line-height: 1.1em;
+        font-size: 3.5em;
       }
     
       a#tryLandsHomeBtn {
@@ -223,6 +224,8 @@ body.home {
   
       & > a {
         justify-content: center;
+        padding-top: 1.4rem;
+        padding-bottom: 0.6rem;
       }
   
       svg {

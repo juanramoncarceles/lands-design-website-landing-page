@@ -70,38 +70,70 @@
 
 
 
+// Set by default the gifs and in case there is hover replace for posters
+
 (function() {
   window.addEventListener('load', () => {
+    // const assets = {
+    //   terrains: {
+    //     poster: '/wp-content/uploads/2020/01/terrainsPoster.png',
+    //     animat: '/wp-content/uploads/2019/12/TerrainOperations.gif'
+    //   },
+    //   lim: {
+    //     poster: '/wp-content/uploads/2020/01/limPoster.png',
+    //     animat: '/wp-content/uploads/2019/12/LandsBIM.gif'
+    //   },
+    //   plants: {
+    //     poster: '/wp-content/uploads/2020/01/plants.jpg',
+    //     animat: '/wp-content/uploads/2019/12/LandsPlantsDatabase.gif'
+    //   },
+    //   documentation: {
+    //     poster: '/wp-content/uploads/2020/01/documentation.png',
+    //     animat: '/wp-content/uploads/2020/01/documentation.gif'
+    //   },
+    //   parametric: {
+    //     poster: '/wp-content/uploads/2020/01/parametric.png',
+    //     animat: '/wp-content/uploads/2019/12/LandsParametricDesign.gif'
+    //   },
+    //   presentation: {
+    //     poster: '/wp-content/uploads/2020/01/presentation.jpg',
+    //     animat: '/wp-content/uploads/2020/01/liveYourProject.gif'
+    //   },
+    //   collaboration: {
+    //     poster: '/wp-content/uploads/2020/01/interoperability.png',
+    //     animat: '/wp-content/uploads/2020/01/interoperability.gif'
+    //   }
+    // }
     const assets = {
       terrains: {
-        poster: '/wp-content/uploads/2020/01/terrainsPoster.png',
-        animat: '/wp-content/uploads/2019/12/TerrainOperations.gif'
+        poster: './imgs/terrainsPoster.png',
+        animat: './videos/TerrainOperations.gif'
       },
       lim: {
-        poster: '/wp-content/uploads/2020/01/limPoster.png',
-        animat: '/wp-content/uploads/2019/12/LandsBIM.gif'
+        poster: './imgs/limPoster.png',
+        animat: './videos/LandsBIM.gif'
       },
       plants: {
-        poster: '/wp-content/uploads/2020/01/plants.jpg',
-        animat: '/wp-content/uploads/2019/12/LandsPlantsDatabase.gif'
+        poster: './imgs/plants.jpg',
+        animat: './videos/LandsPlantsDatabase.gif'
       },
       documentation: {
-        poster: '/wp-content/uploads/2020/01/documentation.png',
-        animat: '/wp-content/uploads/2020/01/documentation.gif'
+        poster: './imgs/documentation.png',
+        animat: './videos/documentation.gif'
       },
       parametric: {
-        poster: '/wp-content/uploads/2020/01/parametric.png',
-        animat: '/wp-content/uploads/2019/12/LandsParametricDesign.gif'
+        poster: './imgs/parametric.png',
+        animat: './videos/LandsParametricDesign.gif'
       },
       presentation: {
-        poster: '/wp-content/uploads/2020/01/presentation.jpg',
-        animat: '/wp-content/uploads/2020/01/liveYourProject.gif'
+        poster: './imgs/presentation.jpg',
+        animat: './videos/liveYourProject.gif'
       },
       collaboration: {
-        poster: '/wp-content/uploads/2020/01/interoperability.png',
-        animat: '/wp-content/uploads/2020/01/interoperability.gif'
+        poster: './imgs/interoperability.png',
+        animat: './videos/interoperability.gif'
       }
-    }
+    }    
     const whyLandsVideos = document.querySelectorAll('#whyUseLands .item');
     if (window.matchMedia('(hover: hover)').matches) {
       console.log('There is hover.');
@@ -132,38 +164,3 @@
     }
   });
 })();
-
-
-// Equivalent object with local assets.
-const assets = {
-  terrains: {
-    poster: './imgs/terrainsPoster.png',
-    animat: './videos/TerrainOperations.gif'
-  },
-  lim: {
-    poster: './imgs/limPoster.png',
-    animat: './videos/LandsBIM.gif'
-  },
-  plants: {
-    poster: './imgs/plants.jpg',
-    animat: './videos/LandsPlantsDatabase.gif'
-  },
-  documentation: {
-    poster: './imgs/documentation.png',
-    animat: './videos/documentation.gif'
-  },
-  parametric: {
-    poster: './imgs/parametric.png',
-    animat: './videos/LandsParametricDesign.gif'
-  },
-  presentation: {
-    poster: './imgs/presentation.jpg',
-    animat: './videos/liveYourProject.gif'
-  },
-  collaboration: {
-    poster: './imgs/interoperability.png',
-    animat: './videos/interoperability.gif'
-  }
-}
-
-// Set by default the gifs and in case there is hover replace for posters

@@ -29,7 +29,7 @@ const replacers = {
     alt: 'Bird\'s eye view of the Canal Park project created with Lands Design. Big green areas mixed with water areas.'
   },
   greenInfrastructure: {
-    url: 'https://stg.lands-design.com/wp-content/uploads/2019/12/green-infrastructure.jpeg',
+    url: 'https://stg.lands-design.com/wp-content/uploads/2020/01/green-infrastructure2.jpg',
     alt: 'View of a viaduct covered with vertical gardens created with Lands Design.'
   },
   forestry: {
