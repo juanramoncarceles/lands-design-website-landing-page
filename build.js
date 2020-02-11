@@ -8,15 +8,15 @@ const filePath = path.join(__dirname, 'src/index.html');
 const replacers = {
   // BANNER
   bannerOne: {
-    url: 'https://stg.landsdesign.com/wp-content/uploads/2019/10/15580157028_7a02d3853f_o-1.jpg',
+    url: 'https://stg.landsdesign.com/wp-content/uploads/2020/02/lands-banner-1.jpg',
     alt: 'Lands Design project of a pond surrounded by a park with a pathway in front of the water.'
   },
   bannerTwo: {
-    url: 'https://stg.landsdesign.com/wp-content/uploads/2019/10/15765573295_a32a330218_o.jpg',
+    url: 'https://stg.landsdesign.com/wp-content/uploads/2020/02/lands-banner-2.jpg',
     alt: 'Lands Design project of a park with pathways, green areas and a big blue art structure.'
   },
   bannerThree: {
-    url: 'https://stg.landsdesign.com/wp-content/uploads/2019/12/shrubs-mejor.jpg',
+    url: 'https://stg.landsdesign.com/wp-content/uploads/2020/02/lands-banner-3.jpg',
     alt: 'Lands Design project of a garden with small organized plants and trees.'
   },
   // MAIN VIDEO
