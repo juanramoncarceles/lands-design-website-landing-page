@@ -29,7 +29,7 @@ const replacers = {
     alt: 'Bird\'s eye view of the Canal Park project created with Lands Design. Big green areas mixed with water areas.'
   },
   greenInfrastructure: {
-    url: 'https://stg.landsdesign.com/wp-content/uploads/2020/01/green-infrastructure2.jpg',
+    url: 'https://stg.landsdesign.com/wp-content/uploads/2020/02/green-infrastructure.jpg',
     alt: 'View of a viaduct covered with vertical gardens created with Lands Design.'
   },
   forestry: {
@@ -44,34 +44,34 @@ const replacers = {
     url: 'https://stg.landsdesign.com/wp-content/uploads/2019/12/cg-artists.jpg',
     alt: 'View of the Villa Savoye project with its green area around created with Lands Design.'
   },
-  // WHY LANDS (gifs)
+  // WHY LANDS (videos)
   lim: {
-    url: 'https://stg.landsdesign.com/wp-content/uploads/2020/01/limPoster.png',
-    alt: 'One of the main Lands Design features is the possibility to model with smart objects that have 3D and 2D representation and embedded information.'
+    url: 'https://stg.landsdesign.com/wp-content/uploads/2020/02/LandsBIM-600.mp4',
+    // alt: 'One of the main Lands Design features is the possibility to model with smart objects that have 3D and 2D representation and embedded information.'
   },
   terrains: {
-    url: 'https://stg.landsdesign.com/wp-content/uploads/2020/01/terrainsPoster.png',
-    alt: 'Lands Design terrains can be imported or created from points or curves. Also they can be reshaped based on cut and fills, paths and divisions.'
+    url: 'https://stg.landsdesign.com/wp-content/uploads/2020/02/LandsTerrainOperations-600.mp4',
+    // alt: 'Lands Design terrains can be imported or created from points or curves. Also they can be reshaped based on cut and fills, paths and divisions.'
   },
   collaboration: {
-    url: 'https://stg.landsdesign.com/wp-content/uploads/2020/01/interoperability.png',
-    alt: 'Diagram indicating the most important file formats with which Lands Design can communicate.'
+    url: 'https://stg.landsdesign.com/wp-content/uploads/2020/02/LandsInteroperability-600.mp4',
+    // alt: 'Diagram indicating the most important file formats with which Lands Design can communicate.'
   },
   plants: {
-    url: 'https://stg.landsdesign.com/wp-content/uploads/2020/01/plants.jpg',
-    alt: 'Examples of the species in the Lands Design huge plant database which include 3D and 2D representations and change of season.'
+    url: 'https://stg.landsdesign.com/wp-content/uploads/2020/02/LandsPlantsDatabase-600.mp4',
+    // alt: 'Examples of the species in the Lands Design huge plant database which include 3D and 2D representations and change of season.'
   },
   documentation: {
-    url: 'https://stg.landsdesign.com/wp-content/uploads/2020/01/documentation.png',
-    alt: 'Example of a landscape project layout created with Lands Design.'
+    url: 'https://stg.landsdesign.com/wp-content/uploads/2020/02/LandsDocumentation-600.mp4',
+    // alt: 'Example of a landscape project layout created with Lands Design.'
   },
   parametric: {
-    url: 'https://stg.landsdesign.com/wp-content/uploads/2020/01/parametric.png',
-    alt: 'Examples of custom landscape parametric design workflows with Grasshopper and Lands Design.'
+    url: 'https://stg.landsdesign.com/wp-content/uploads/2020/02/LandsParametricDesign-600.mp4',
+    // alt: 'Examples of custom landscape parametric design workflows with Grasshopper and Lands Design.'
   },
   presentation: {
-    url: 'https://stg.landsdesign.com/wp-content/uploads/2020/01/presentation.jpg',
-    alt: 'Render of the Villa Arcipelago by Gianni Botsford with the plants created with Lands Design'
+    url: 'https://stg.landsdesign.com/wp-content/uploads/2020/02/LandsRenderVideo-600.mp4',
+    // alt: 'Render of the Villa Arcipelago by Gianni Botsford with the plants created with Lands Design'
   },
   // PLATFORMS
   logoRhino: {
