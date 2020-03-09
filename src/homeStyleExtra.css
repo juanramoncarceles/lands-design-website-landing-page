@@ -60,7 +60,7 @@ section.projects .items-container {
 }
 
 section.projects .project-item {
-  width: 24%;
+  width: 30%;
   cursor: pointer;
   text-align: center;
 }
@@ -100,6 +100,14 @@ section.projects .btn-container {
 section.social-media {
   height: 150px;
   background-color: #d0d0d0;
+}
+
+section.social-media > .content-width > .section-title {
+  text-align: center;
+}
+
+section.social-media > .content-width > .social-media-btns {
+  display: flex;
 }
 
 footer {

@@ -55,10 +55,12 @@
 (function() {
   window.addEventListener('load', () => {       
     const whyLandsVideos = document.querySelectorAll('#whyUseLands .item');
-    if (window.matchMedia('(hover: hover)').matches) {
+    if (window.matchMedia('(any-hover: hover)').matches) { // another option => hover: hover
       console.log('There is hover.');
       let current;
       whyLandsVideos.forEach(item => {
+        item.classList.remove('nohover');
+        item.querySelector('video').removeAttribute('controls');
         item.addEventListener('mouseenter', () => {
           if (current) {
             if (current.dataset.name !== item.dataset.name) {
@@ -76,10 +78,7 @@
         });
       });
     } else {
-      console.log('Cannot hover.');
-      whyLandsVideos.forEach(item => {
-        item.querySelector('video').play();
-      });
+      console.log('There is no hover.');
     }
   });
 })();
