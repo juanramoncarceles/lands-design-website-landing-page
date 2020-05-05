@@ -315,6 +315,7 @@ body.home {
     & > div > video {
       display: block;
       width: 100%;
+      height: auto;
     }
   }
 
@@ -490,9 +491,9 @@ body.home {
       background-position: top;
     }
   
-    video,
-    img {
+    video {
       width: 100%;
+      height: auto;
     }
     
     .grid > .item {
