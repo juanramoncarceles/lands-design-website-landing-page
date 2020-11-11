@@ -147,7 +147,8 @@ body.home {
         transition: transform 0.3s;
       }
       
-      a#tryLandsHomeBtn:hover {
+      a#tryLandsHomeBtn:hover,
+      a#tryLandsHomeBtn:focus {
         transform: scale(1.2);
       }
     }
@@ -205,7 +206,8 @@ body.home {
         transition: all 0.4s;
       }
   
-      & > a:hover svg {
+      & > a:hover svg,
+      & > a:focus svg {
         opacity: 1;
         transform: translateY(-20px);
       }
@@ -226,7 +228,8 @@ body.home {
         background-color: rgb(219, 196, 132);
       }
       
-      & > a:hover::after {
+      & > a:hover::after,
+      & > a:focus::after {
         width: 100%;
       }
   
