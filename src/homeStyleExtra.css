@@ -114,3 +114,47 @@ footer {
   height: 300px;
   background-color: #676767;
 }
+
+/*********************************************************/
+/********* THIS IS THE THEME BUTTON IN OUR SITE **********/
+/*********************************************************/
+
+.theme-button {
+  display: inline-block;
+  color: #679e3c;
+  position: relative;
+  font-size: 20px;
+  padding: .3em 1em;
+  line-height: 1.7em !important;
+  background-color: transparent;
+  border: 2px solid;
+  border-radius: 3px;
+  transition: all .2s;
+}
+
+.theme-button:hover,
+.theme-button:focus {
+  background-color: rgba(0,0,0,.05);
+  border: 2px solid transparent;
+  padding: .3em 2em .3em .7em;
+  color: #4d4d4d !important;
+}
+
+.theme-button:after {
+  content: "";
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 18'><polyline points='2,2 8,9 2,16' fill='none' stroke-width='3px' stroke='%234d4d4d' stroke-linecap='round' stroke-linejoin='round' /></svg>");
+  background-position: center;
+  opacity: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 18px;
+  transition: all .2s;
+  top: 32%;
+  margin-left: 15px;
+}
+
+.theme-button:hover:after,
+.theme-button:focus:after {
+  opacity: 1;
+}
