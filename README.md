@@ -21,14 +21,14 @@ This requires NodeJS and Dart SASS installed globally (it might work with other 
 
 Stop the SASS watch mode if active.
 
-**Option 1** (Windows only)
+**Option 1** (Windows)
 
-Open the PowerShell file *build.ps1* and run it from VSCode. You may need the PowerShell plugin installed.
+Run the *build.ps1* file from PowerShell: `.\build.js`
 
-**Option 2**
+**Option 2** (Unix)
 
-Run the contents in *build.ps1* in your terminal.
+Run the *build.sh* file from the shell: `sh build.sh`
 
 **Result**
 
-The HTML and CSS files will be in the dist folder.
+The final HTML and CSS files will be in the 'dist' folder.
