@@ -1,24 +1,3 @@
-/********************** LANDS HOME SLIDESHOW ***********************/
-
-(function() {
-  window.addEventListener('load', () => {
-    const slides = document.getElementById('landsHomeSlideshow').children;  
-    let slide = 0;
-    let previous;
-    (function runSlides() {
-      slides[slide].style.opacity = '1';
-      if (previous)
-        previous.style.opacity = '0';
-      previous = slides[slide];
-      slide++;
-      if (slide >= slides.length)
-        slide = 0;
-      setTimeout(runSlides, 4000);
-    })();
-  });
-})();
-
-
 /************************ TRY LANDS BUTTON *************************/
 
 // (function() {
@@ -49,26 +28,7 @@
 //   window.addEventListener('scroll', debounce(changeOnScroll));
 // })();
 
-
-/************************ WHY LANDS VIDEOS *************************/
-
-// (function() {
-//   const whyLandsVideos = document.querySelectorAll('#whyUseLands .item');
-//   let current;
-//   whyLandsVideos.forEach(item => {
-//     item.addEventListener('mouseenter', () => {
-//       if (current && current.dataset.name !== item.dataset.name) {
-//         current.querySelector('video').style.opacity = '0.6';
-//         current.querySelector('video').pause();
-//       }
-//       current = item;
-//       current.querySelector('video').style.opacity = '1';
-//       current.querySelector('video').play();
-//     });
-//   });
-// })();
-
-
+/******************** FOR GIFS INSTEAD OF VIDEOS *******************/
 
 // Set by default the gifs and in case there is hover replace for posters
 
