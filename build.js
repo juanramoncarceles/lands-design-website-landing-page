@@ -83,6 +83,16 @@ const replacers = {
   logoAutocad: {
     url: 'https://stg.landsdesign.com/wp-content/uploads/2019/11/autocad-logo.png',
     alt: 'A red capital letter A representing the AutoCAD logo.'
+  },
+  // NEWS
+  news: {
+    url: 'https://stg.landsdesign.com/wp-content/uploads/2020/12/Lands_Design_Inside_Revit.jpg',
+    alt: 'Two 3D models of a terrain with trees, on the left Lands Design and on the right the same model in Revit to demonstrate the integrations between the two software.'
+  },
+  // PROJECTS
+  projects: {
+    url: 'https://stg.landsdesign.com/wp-content/uploads/2020/11/Agriculture-Educational-and-Culture-Center-by-Amr-Lail.jpg',
+    alt: 'Rendered aerial view of the Agriculture Educational and Culture Center model created with Rhino and Lands Design by Amr Lail.'
   }
 }
 

@@ -8,12 +8,30 @@ body.home {
   
   --header-height: 80px;
   --questions-height: 30vh; // 280px
-  --decoration-size: 500px;
+  --decoration-size: 400px;
 
   .content-width {
     width: 95%;
     max-width: 1200px;
     margin: auto;
+  }
+
+  ul {
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  li {
+    margin-left: 0 !important; /* `important` is necessary to override a rule in main.css */
+  }
+
+  .above {
+    z-index: 1;
+    position: relative;
+  }
+
+  .bg-light-gray {
+    background-color: #f5f5f5;
   }
 
   /*********************************************************/
@@ -295,7 +313,6 @@ body.home {
       width: 100%;
       height: var(--decoration-size);
       top: calc(var(--decoration-size) * -1);
-      z-index: -1;
       background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 115'><path fill='%23f5f5f5' d='M0,0 C0,0 172,109 500,109 C826,109 1000,0 1000,0 L1000,115 L0,115Z'/></svg>");
       background-repeat: no-repeat;
       background-size: contain;
@@ -309,7 +326,6 @@ body.home {
       width: 100%;
       height: var(--decoration-size);
       bottom: calc(var(--decoration-size) * -1);
-      z-index: -1;
       background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 115'><path fill='%23f5f5f5' d='M1000,115 C1000,115 828,6 500,6 C174,6 0,115 0,115 L0,0 L1000,0Z'/></svg>");
       background-repeat: no-repeat;
       background-size: contain;
@@ -481,7 +497,6 @@ body.home {
       width: 100%;
       height: var(--decoration-size);
       top: calc(var(--decoration-size) * -1);
-      z-index: -1;
       background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 115'><path fill='%23f5f5f5' d='M-0.161808,31.9464 L-0.175643,115.144 L1000.02,115.144 L1000.03,40.5738 C1000.03,40.5737 968.896,54.3208 935.896,43.3208 C902.896,32.3208 880.826,19.3161 850.391,10.1442 C819.469,0.825523 780.932,-5.59164 729.057,10.8109 C637.774,39.6743 543.754,119.374 306.636,111.319 C149.636,105.986 61.6364,57.6523 -0.161808,31.9464Z'/></svg>");
       background-repeat: no-repeat;
       background-size: contain;
@@ -495,7 +510,6 @@ body.home {
       width: 100%;
       height: var(--decoration-size);
       bottom: calc(var(--decoration-size) * -1);
-      z-index: -1;
       background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 85'><path fill='%23f5f5f5' d='M0,14 L0,0 L1000,0 L1000,35 C1000,35 959.607,11.4879 868.607,11.4879 C777.607,11.4879 710.44,20.8212 619.44,39.8212 C528.44,58.8212 438.69,81.7379 368.607,81.4879 C300.248,81.244 225.774,40.4879 167.774,20.9879 C97.9336,-2.49288 48,4.5 0,14Z'/></svg>");
       background-repeat: no-repeat;
       background-size: contain;
@@ -659,7 +673,7 @@ body.home {
   
   section.platforms {
     padding-top: 10rem;
-    padding-bottom: 1rem;
+    padding-bottom: 9rem;
   
     .section-title {
       text-align: center;
@@ -700,14 +714,9 @@ body.home {
       margin: 0 auto 0.5rem;
     }
     
-    div.platforms-columns ul {
-      padding-left: 0;
-    }
-    
     div.platforms-columns li {
       display: flex;
       align-items: center;
-      margin-left: 0;
       padding-top: 0.5rem;
       padding-bottom: 0.5rem;
     }
@@ -733,7 +742,7 @@ body.home {
   
       div.platforms-columns {
         flex-direction: row;
-        justify-content: space-around; /* space-evenly would be better but is not supported in Edge */
+        justify-content: space-around; /* space-evenly would be better but is not supported in old Edge */
       }
     
       div.platforms-columns > .left-col {
@@ -760,6 +769,144 @@ body.home {
       div.platforms-columns > .right-col li > span {
         padding-left: 0;
         padding-right: 1rem;
+      }
+    }
+  }
+
+  /*********************************************************/
+  /******************* SECTION: GENERIC ********************/
+  /*********************************************************/
+
+  section.standard-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    .section-title {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 400;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn-container {
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+  }
+
+  /*********************************************************/
+  /*************** SECTION: PROJECTS & NEWS ****************/
+  /*********************************************************/
+
+  .items-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  
+    .item {
+      max-width: 350px;
+      margin-bottom: 2rem;
+      cursor: pointer;
+      text-align: center;
+
+      & > h5 {
+        font-size: 1.2rem;
+        margin-top: 0.8rem;
+      }
+
+      &:hover img,
+      &:focus img {
+        transform: scale(1.2);
+      }
+
+      & > div {
+        height: 200px;
+        overflow: hidden;
+      }
+
+      & img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 1s;
+      }
+    }
+  }
+
+  @media (min-width: 700px) {     
+    .items-container {
+      flex-direction: row;
+    
+      .item {
+        width: 30%;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  /*********************************************************/
+  /**************** SECTION: SOCIAL MEDIA ******************/
+  /*********************************************************/
+
+  .social-media-btns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.8rem;
+
+    /* In case 'gap' is not supported */
+    @supports not (gap: 1px) {
+      & > li {
+        padding-bottom: 1.8rem;
+
+        &:not(:last-child) {
+          padding-right: 1.8rem;
+        }
+      }      
+    }
+
+    .icon-link {
+      display: block;
+      color: #707070;
+      transition: transform 0.4s, color 0.4s;
+
+      & > svg {
+        display: block;
+        width: 48px;
+        height: 48px;
+      }
+    }
+
+    .icon-link:hover,
+    .icon-link:focus {
+      transform: translateY(-8px);
+
+      &.facebook {
+        color: #3b5998;
+      }
+
+      &.twitter {
+        color: #00aced;
+      }
+  
+      &.instagram {
+        color: #ea2c59;
+      }
+  
+      &.flickr {
+        color: #ff0084;
+      }
+  
+      &.linkedin {
+        color: #007bb6;
+      }
+  
+      &.youtube {
+        color: #c00;
       }
     }
   }
